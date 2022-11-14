@@ -30,13 +30,16 @@ const ConfirmEmailScreen=()=>{
 <CustomInput placeholder="Enter your confirmation code" value={code} setValue={setCode} />
 
              
-
-<CustomButton text="Confirm" onPress={onConfirmPressed}/>
+<View style={styles.cnfrm}>
+<CustomButton text="Confirm" onPress={onConfirmPressed} />
 
 <CustomButton text="Resend Code" onPress={onResendCodePressed}
 type="SECONDARY"/>
-
-<CustomButton text="Have an account? Sign in" onPress={onSignInPressed} type="TERTIARY"/>
+</View>
+<View style={styles.signinconf}>
+<Text style={styles.havean}>Have an account? </Text>
+<CustomButton text="Sign in" onPress={onSignInPressed} type="TERTIARY"/>
+</View>
 </View>
 </ScrollView>
     );
@@ -45,14 +48,40 @@ type="SECONDARY"/>
 const styles=StyleSheet.create({
 root:{
     alignItems:'center',
-    padding:20,
+    justifyContent:'center',
+    paddingTop:200,
+    paddingBottom:200,
+    paddingLeft:24,
+    paddingRight:24,
+    backgroundColor:'#EBF3FF',
 },
 
 title:{
-    fontsize:24,
-    fontweight:'bold',
-    color:'blue',
-    margin:10,
+    fontSize:24,
+    color:'#04124A',
+    alignSelf:'flex-start',
+    marginBottom:20,
 },
+
+cnfrm:{
+    width:'68%',
+    flexDirection:'row',
+    flexWrap:'wrap',
+    justifyContent:'space-between'
+},
+
+havean:{
+    color:'#68768A',
+
+},
+
+signinconf:{
+    width:'48%',
+    flexDirection:'row',
+    flexWrap:'wrap',
+    justifyContent:'space-between'
+},
+
+
 });
 export default ConfirmEmailScreen;

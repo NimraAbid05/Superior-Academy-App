@@ -28,12 +28,13 @@ const ForgotPasswordScreen=()=>{
 <CustomInput placeholder="Enter your username" value={username} setValue={setUsername} />
 
              
-
+<View style={styles.frgt}>
 <CustomButton text="Send" onPress={onSendPressed}/>
 
 
 
-<CustomButton text="Back to Sign in" onPress={onSignInPressed} type="TERTIARY"/>
+<CustomButton text="Cancel" onPress={onSignInPressed} type="TERTIARY3"/>
+</View>
 </View>
 </ScrollView>
     );
@@ -42,14 +43,28 @@ const ForgotPasswordScreen=()=>{
 const styles=StyleSheet.create({
 root:{
     alignItems:'center',
-    padding:20,
+    justifyContent:'center',
+    // marginTop:'50',
+    paddingTop:200,
+    paddingBottom:200,
+    paddingLeft:24,
+    paddingRight:24,
+    backgroundColor:'#EBF3FF',
 },
 
 title:{
-    fontsize:24,
-    fontweight:'bold',
-    color:'blue',
-    margin:10,
+    fontSize:24,
+    color:'#04124A',
+    alignSelf:'flex-start',
+    marginBottom:20,
 },
+
+frgt:{
+    width:'50%',
+    flexDirection:'row',
+    flexWrap:'wrap',
+    justifyContent:'space-between'
+},
+
 });
 export default ForgotPasswordScreen;

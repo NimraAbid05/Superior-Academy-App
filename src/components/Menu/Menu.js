@@ -7,35 +7,35 @@ const Menu = () => {
         <View style={styles.menuContainer}>
             <TouchableOpacity style={styles.buttonStyle}
             onPress={()=>navigation.navigate("Course")}>
-                    <Image style={styles.IconStyle}
-                 source={require('../../../assets/images/course.png')} />
+                    <Image style={styles.IconStyle1}
+                 source={require('../../../assets/images/1.png')} />
             </TouchableOpacity>
           
 
             <TouchableOpacity style={styles.buttonStyle}
             onPress={()=>navigation.navigate("About")}>
-                 <Image style={styles.IconStyle}
-                 source={require('../../../assets/images/about.png')} />
+                 <Image style={styles.IconStyle2}
+                 source={require('../../../assets/images/2.png')} />
             </TouchableOpacity>
            
 
             <TouchableOpacity style={styles.buttonStyle}
             onPress={()=>navigation.navigate("Contact")}>
-                   <Image style={styles.IconStyle}
-                 source={require('../../../assets/images/contact.png')} />
+                   <Image style={styles.IconStyle3}
+                 source={require('../../../assets/images/3.png')} />
             </TouchableOpacity>
           
 
             <TouchableOpacity style={styles.buttonStyle}
             onPress={()=>navigation.navigate("UserData")}>
-                <Image style={styles.IconStyle}
-                 source={require('../../../assets/images/student.png')} />
+                <Image style={styles.IconStyle4}
+                 source={require('../../../assets/images/4.png')} />
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.buttonStyle}
             onPress={()=>navigation.navigate("Todo")}>
-                <Image style={styles.IconStyle}
-                 source={require('../../../assets/images/Todo.png')} />
+                <Image style={styles.IconStyle5}
+                 source={require('../../../assets/images/5.png')} />
             </TouchableOpacity>
               
            
@@ -46,14 +46,55 @@ const styles=StyleSheet.create({
     menuContainer:{
         flexDirection:'row',
         justifyContent:'space-evenly',
-        marginBottom:20,
+        // justifyContent:'space-between',
+        // marginBottom:20,
+        // paddingVertical:20,
         
     },
-    IconStyle:{
-        width:"100%",
-        height:50,
-        aspectRatio:1,
+    IconStyle1:{
+        width:10,
+        height:10,
+        // marginTop:20,
+        paddingVertical:20,
+        paddingHorizontal:20,
+        // aspectRatio:1,
 
-    }
+    },
+    IconStyle2:{
+        width:20,
+        height:20,
+        // marginTop:20,
+        paddingVertical:20,
+        paddingHorizontal:20,
+        // aspectRatio:1,
+
+    },
+    IconStyle3:{
+        width:20,
+        height:20,
+        // marginTop:20,
+        paddingVertical:20,
+        paddingHorizontal:20,
+        // aspectRatio:1,
+
+    },
+    IconStyle4:{
+        width:20,
+        height:20,
+        // marginTop:20,
+        paddingVertical:20,
+        paddingHorizontal:20,
+        // aspectRatio:1,
+
+    },
+    IconStyle5:{
+        width:20,
+        height:20,
+        // marginTop:20,
+        paddingVertical:20,
+        paddingHorizontal:20,
+        // aspectRatio:1,
+
+    },
 });
 export default Menu;

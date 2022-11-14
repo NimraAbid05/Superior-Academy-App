@@ -11,32 +11,79 @@ const CustomButton=({onPress,text,type="PRIMARY"})=>{
 
 const styles=StyleSheet.create({
     container:{
-        backgroundColor:'blue',
-        width:'100%',
-        padding:15,
-        marginVertical:5,
-        alignItems:'center',
-        borderRadius:5,
+        
     },
     container_PRIMARY:{
-     backgroundColor:'#3B71F3',
+        backgroundColor:'#04124A',
+        paddingHorizontal:20,
+        paddingVertical:15,
+        marginVertical:20,
+        alignItems:'center',
+        borderRadius:10,
+
     },
+    
     container_SECONDARY:{
-    borderColor:'#3B71F3',
-    borderWidth:2,
+        backgroundColor:'white',
+        paddingHorizontal:20,
+        paddingVertical:15,
+        marginVertical:20,
+        alignItems:'center',
+        borderRadius:10,
     },
     container_TERTIARY:{
-backgroundColor:'white',
+        // marginVertical:7,
+        alignSelf:'flex-end',
+    },
+        container_TERTIARY2:{
+        // marginVertical:7,
+        // alignSelf:'flex-end',
+    },
+        container_TERTIARY3:{
+            // backgroundColor:'#EDEEF0',
+            backgroundColor:'white',
+            paddingHorizontal:20,
+            paddingVertical:15,
+            marginVertical:20,
+            alignItems:'center',
+            borderRadius:10,
+
+    },
+        container_TERTIARY4:{
+            // backgroundColor:'#EDEEF0',
+            backgroundColor:'white',
+            paddingHorizontal:20,
+            paddingVertical:15,
+            marginVertical:20,
+            alignItems:'center',
+            borderRadius:10,
+
     },
     text:{
         fontWeight:'bold',
         color:'white',
     },
     text_TERTIARY:{
-        color:'gray',
+        color:'#04124A',
+        display:'flex',
+    },
+    text_TERTIARY2:{
+        color:'#04124A',
+        display:'flex',
+    },
+    text_TERTIARY3:{
+        color:'#04124A',
+        display:'flex',
+    },
+    text_TERTIARY4:{
+        color:'#04124A',
+        display:'flex',
     },
     text_SECONDARY:{
-        color:'#3B71F3',
-    }
+        color:'#04124A',
+        display:'flex',
+        
+    },
+    
 });
 export default CustomButton;

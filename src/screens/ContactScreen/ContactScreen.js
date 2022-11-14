@@ -1,26 +1,34 @@
-import { StyleSheet,Text,View,Checkbox,TouchableOpacity ,useState,TextInput} from "react-native";
-import React from "react";
-const ContactScreen = ()=>{
+import { StyleSheet,Text,View,TouchableOpacity,TextInput, Alert} from "react-native";
+import Checkbox from "expo-checkbox";
+import React,{useState} from "react";
+const ContactScreen = ({navigation})=>{
     
-  const [name, setName] = useState("");
+  const [name, setName] = useState("");   //hooks
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [agree, setAgree] = useState(false);
 
-  const submit = () => {
-    if (!name && !email && !phone && !message) {
-      Alert.alert("Plzz fill all the fields");
-    } else {
-      Alert.alert(`Thank You ${name}`);
-      navigation.navigate("DashBoard");
-    }
-  };
+
+
+const submit=()=>{
+  if(!name && !email && !phone && !message){
+Alert.alert("Please fill all the fields");
+  }
+  else{
+    Alert.alert('Thank you',name);
+    // Alert.alert(name);
+    navigation.navigate("DashBoard");
+  }
+};
+
+
+  
     return(
         <View style={styles.mainContainer}>
-            <Text style={styles.mainHeader}>Level up your Knowledge</Text>
+            <Text style={styles.mainHeader}>Thank you for your patience</Text>
             <Text style={styles.description}>
-You can reach us anytime via info.superioredu@gmail.com
+            Have any query? please feel free to contact us we will be right back to you.
             </Text>
 
             <View style={styles.inputContainer}>
@@ -34,7 +42,7 @@ You can reach us anytime via info.superioredu@gmail.com
 <View style={styles.inputContainer}>
                 <Text style={styles.labels}>
                     Enter your email </Text>
-                <TextInput style={styles.inputStyle} placeholder={"demo@gmail.com"} 
+                <TextInput style={styles.inputStyle} placeholder={"abc@gmail.com"} 
                 value={email}
                 onChangeText={(email) => setEmail(email)} />
 </View>
@@ -42,7 +50,7 @@ You can reach us anytime via info.superioredu@gmail.com
 <View style={styles.inputContainer}>
                 <Text style={styles.labels}>
                     Enter your number </Text>
-                <TextInput style={styles.inputStyle} placeholder={"031267588"} 
+                <TextInput style={styles.inputStyle} placeholder={"03123456789"} 
                  value={phone}
                  onChangeText={(phone) => setPhone(phone)}
                  />
@@ -51,10 +59,11 @@ You can reach us anytime via info.superioredu@gmail.com
 <View style={styles.inputContainer}>
                 <Text style={styles.labels}>
                     How can we help you? </Text>
-                <TextInput style={[styles.inputStyle,styles.multilineStyle]} placeholder={"Tell us about yourself"} 
+                <TextInput style={[styles.inputStyle,styles.multilineStyle]} placeholder={"How can we help you?"} 
               value={message}
               onChangeText={(msg) => setMessage(msg)}
-                numberOfLines={5} multiline={true} />
+                numberOfLines={5}
+                multiline={true} />
 </View>
 
       <View style={styles.wrapper}>
@@ -79,10 +88,7 @@ You can reach us anytime via info.superioredu@gmail.com
         onPress={submit}>
         <Text style={styles.buttonText}> Contact Us </Text>
       </TouchableOpacity>
-
-
-
-        </View>
+ </View>
     );
 };
 
@@ -90,22 +96,21 @@ You can reach us anytime via info.superioredu@gmail.com
         mainContainer: {
           height: "100%",
           paddingHorizontal: 30,
-          backgroundColor: "#fff",
+          backgroundColor:'#EBF3FF',
         },
         mainHeader: {
           fontSize: 24,
-          color: "#344055",
+          color: "#04124A",
           fontWeight: "500",
-          paddingTop: 20,
+          paddingTop: 40,
           paddingBottom: 15,
-          fontFamily: "Nunito_700Bold",
+       
           textTransform: "capitalize",
         },
         description: {
-          fontSize: 18,
-          color: "#7d7d7d",
-          paddingBottom: 20,
-          fontFamily: "WorkSans_400Regular",
+          fontSize: 16,
+          color: "#04124A",
+          paddingBottom: 15,
           lineHeight: 25,
         },
       
@@ -115,29 +120,44 @@ You can reach us anytime via info.superioredu@gmail.com
         labels: {
        
           fontSize: 15,
-          color: "#7d7d7d",
+          color: "#68768A",
           paddingBottom: 5,
-          fontFamily: "WorkSans_400Regular",
+          // fontFamily: "WorkSans_400Regular",
           lineHeight: 25,
         },
         inputStyle: {
+          backgroundColor:'#EBF3FF',
           borderWidth: 1,
-          borderColor: "rgba(0, 0, 0, 0.3)",
+          borderColor: "white",
           paddingHorizontal: 15,
           paddingVertical: 6,
-          borderRadius: 2,
+          borderRadius: 15,
+
+          // shadowColor: "#B4C1D5",
+            // shadowColor: "red",
+            shadowOffset: {
+              width: 10,
+              height: 10,
+          },
+          shadowOpacity: 1,
+          shadowRadius: 6,
+          
+          elevation: 10,
         },
         multiineStyle: {
           paddingVertical: 4,
         },
         buttonStyle: {
+          width:130,
           borderRadius: 5,
-          paddingVertical: 10,
+          paddingVertical: 12,
           paddingHorizontal: 18,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          alignSelf:'center',
           marginVertical: 30,
+          backgroundColor:'#04124A',
         },
         buttonText: {
           color: "#eee",
@@ -146,12 +166,13 @@ You can reach us anytime via info.superioredu@gmail.com
           display: "flex",
           flexDirection: "row",
           marginTop: 20,
-          fontFamily: "WorkSans_400Regular",
+        
         },
         wrapperText: {
           marginLeft: 10,
+          // marginTop: 10,
           color: "#7d7d7d",
-          fontFamily: "WorkSans_400Regular",
+       
         },
 });
 export default ContactScreen;

@@ -25,7 +25,7 @@ const SignUpScreen=()=>{
     return(
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.root}>
-            <Text style={styles.title}>Superior Academy</Text>
+            <Text style={styles.superior}>Superior Academy</Text>
 
             <Image source={Logo}
              style={[styles.logo,{height: height*0.3}]}
@@ -49,9 +49,10 @@ const SignUpScreen=()=>{
 
 <CustomButton text="Sign Up" onPress={onSignUpPressed}/>
 
-
-
-<CustomButton text="Already have an account? Sign in" onPress={onSignInPressed} type="TERTIARY"/>
+<View style={styles.signin}>
+<Text style={styles.alreadyHave}>Already have an account?</Text>
+<CustomButton text="Sign in" onPress={onSignInPressed} type="TERTIARY"/>
+</View>
 </View>
 </ScrollView>
     );
@@ -61,17 +62,27 @@ const styles=StyleSheet.create({
 root:{
     alignItems:'center',
     padding:20,
+    backgroundColor:'#EBF3FF',
 },
 logo:{
     width:'100%',
     maxWidth:400,
     maxHeight:400,
 },
-title:{
-    fontsize:24,
-    fontweight:'bold',
-    color:'blue',
-    margin:10,
+
+alreadyHave:{
+    color:'#68768A',
+
+},
+
+signin:{
+    width:'60%',
+    flexDirection:'row',
+    flexWrap:'wrap',
+    justifyContent:'space-between'
+},
+superior:{
+    fontSize:36,
 },
 });
 export default SignUpScreen;

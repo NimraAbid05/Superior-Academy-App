@@ -1,5 +1,6 @@
 import { View, Text, FlatList, StyleSheet, Image } from "react-native";
 import React, { useState, useEffect } from "react";
+import { ScrollView } from "react-native-gesture-handler";
 
 const UserDataScreen = () => {
   const [isLoaded, setIsLoaded] = useState(true);
@@ -61,7 +62,8 @@ const styles = StyleSheet.create({
       width: "100%",
       minHeight: "100%",
       paddingVertical: 50,
-      backgroundColor: "#ebedee",
+      // backgroundColor: '#EBF3FF',
+      backgroundColor: "#68768A",
     },
     card: {
       width: 250,
@@ -73,28 +75,29 @@ const styles = StyleSheet.create({
       justifyContent: "space-between",
       backgroundColor: "#353535",
       paddingVertical: 10,
-      fontFamily: "JosefinSans_400Regular",
-      fontFamily: "WorkSans_400Regular",
+      // fontFamily: "JosefinSans_400Regular",
+      // fontFamily: "WorkSans_400Regular",
     },
     idNumber: {
       fontSize: 20,
       color: "rgba(255, 255, 255, 0.5)",
-      fontFamily: "JosefinSans_400Regular",
-      fontFamily: "WorkSans_400Regular",
+      // fontFamily: "JosefinSans_400Regular",
+      // fontFamily: "WorkSans_400Regular",
       paddingRight: 10,
     },
     bioData: {
       fontSize: 30,
       color: "#fff",
-      fontFamily: "JosefinSans_400Regular",
-      fontFamily: "WorkSans_400Regular",
+      // fontFamily: "JosefinSans_400Regular",
+      // fontFamily: "WorkSans_400Regular",
     },
     mainHeader: {
       fontSize: 30,
-      color: "#a18ce5",
+      color: "#04124A",
       textAlign: "center",
-      fontFamily: "JosefinSans_400Regular",
-      fontFamily: "WorkSans_400Regular",
+      backgroundColor: "#EBF3FF",
+      // fontFamily: "JosefinSans_400Regular",
+      // fontFamily: "WorkSans_400Regular",
       paddingVertical: 50,
     },
     imgContainer: {
@@ -110,8 +113,8 @@ const styles = StyleSheet.create({
       marginBottom: 10,
       alignSelf: "flex-start",
       textTransform: "capitalize",
-      fontFamily: "JosefinSans_400Regular",
-      fontFamily: "WorkSans_400Regular",
+      // fontFamily: "JosefinSans_400Regular",
+      // fontFamily: "WorkSans_400Regular",
     
 },
 });
